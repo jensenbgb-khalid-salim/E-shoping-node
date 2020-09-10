@@ -1,0 +1,224 @@
+
+ 
+
+  
+ body{
+  
+  height: 100vh;
+  font-family: 'Noto Sans TC', sans-serif;
+  background-image: linear-gradient(200deg, #f5f7fa 0%,#c3cfc2 100%) ;
+  /* background-size: cover; */
+  
+  
+}
+
+
+.navBar{
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-family: 'Bangers', cursive;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 20px ;
+  
+
+}
+.navBar a{
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: all .3s;
+}
+.navBar a:hover{
+  text-decoration: none;
+  color: #d7da41;
+  margin-top: 5px;
+  font-size: 23px;
+  text-shadow: 2px 2px;
+  border-bottom: #272727 1px solid;
+  transition: all .3s;
+}
+
+
+/* cart css  */
+.shoppingCart {
+  width: 80%;
+  height: 80%;
+  margin: 80px auto; 
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: none;
+ transition: opacity 2s ease-in;
+
+}
+
+.title {
+  height: 60px;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 600;
+}
+ 
+.item {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  height: 120px;
+  width: 91%;
+  
+}
+.image img {
+  max-width: 180px;
+  min-width: 25%;
+  max-height: 180px;
+  min-height: 25% ;
+}
+.item:nth-child(n) {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 20px;
+}
+.buttons .delete-btn
+{
+  width: 100%;
+  height: 30px;
+  margin-right: 18px  ;
+  Cursor: pointer;
+}
+button {
+
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.delete-btn {
+  
+  height: 17px;
+  
+}
+ 
+.like-btn {
+
+  background: url('../img/heartBtn.png');
+  width: 45px;
+  height: 45px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+/* Let’s add some basic style to  product name and description. */
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+ 
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+}
+ 
+.description span:first-child {
+  margin-bottom: 5px;
+}
+.description span:last-child {
+  font-weight: 300;
+  margin-top: 8px;
+  color: #86939E;
+}
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 30px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+ 
+
+.minus-btn  {
+  margin-bottom: 3px;
+  background-image: url(../img/minusButton-64.png) no-repeat;
+}
+.plus-btn  {
+  margin-top: 2px;
+  background-image: url(../img/pluseButton.png) no-repeat;
+}
+ 
+button:focus,
+input:focus {
+  outline:0;
+}
+.total-price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+.totalPrice{
+  display:flex ;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .item {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image img {
+    width: 50%;
+    height: 50%;
+  }
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+  .buttons {
+    margin-right: 20px;
+  }
+}
+
